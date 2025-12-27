@@ -705,6 +705,10 @@ select {
     .mobile-menu-btn {
         display: block !important;
     }
+
+    .desktop-cta {
+        display: none !important;
+    }
 }
 
 .mobile-menu-btn {

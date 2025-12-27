@@ -9,7 +9,11 @@ export default function WhatsAppBubble() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    // Small delay to ensure client-side rendering matches
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);

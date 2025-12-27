@@ -41,7 +41,7 @@ export default function Navbar() {
         </ul>
 
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <button className="btn btn-primary" style={{ display: isMobileMenuOpen ? 'none' : 'inline-flex' }}>Beli Sekarang</button>
+            <button className="btn btn-primary desktop-cta">Beli Sekarang</button>
             <button className="mobile-menu-btn" onClick={toggleMobileMenu} aria-label="Menu">
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
