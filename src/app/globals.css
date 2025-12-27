@@ -695,12 +695,57 @@ select {
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .nav-links { display: none; }
     .hero-features { grid-template-columns: 1fr; }
     .stats-grid { flex-direction: column; gap: 40px; }
     .steps-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
+    
+    .mobile-menu-btn {
+        display: block !important;
+    }
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary);
+    z-index: 1001;
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav-overlay.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.mobile-nav-link:hover {
+    color: var(--primary);
 }
 
 /* WhatsApp Bubble */

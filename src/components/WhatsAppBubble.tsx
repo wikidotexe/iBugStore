@@ -29,7 +29,7 @@ export default function WhatsAppBubble() {
           {contacts.map((contact, index) => (
             <Link
               key={index}
-              href={`https://wa.me/${contact.number}`}
+              href={`https://wa.me/${contact.number}?text=${encodeURIComponent("Apakah masih ada?")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-menu-item"
