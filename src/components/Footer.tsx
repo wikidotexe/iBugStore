@@ -21,12 +21,12 @@ export default function Footer() {
               <a href="https://www.instagram.com/ibug.storee">
                 <Instagram size={20} />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <Twitter size={20} />
               </a>
               <a href="#">
                 <Youtube size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="footer-links">
